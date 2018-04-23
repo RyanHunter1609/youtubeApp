@@ -8,6 +8,7 @@ public class Main {
         queue1 = queue1.enqueue(1, "10 Daily hacks ");
         queue1 = queue1.enqueue(7, "NBA Playoffs");
 
+
         System.out.println("Queue1 value(s) results: " + queue1);
     }
 }
