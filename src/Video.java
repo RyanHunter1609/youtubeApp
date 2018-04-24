@@ -36,27 +36,31 @@ public class Video {
 
     @Override
     public String toString() {
-        return "duration (minutes): " + duration +
-                "\tkeyword: " + keyword + "\n" + next;
+        return "\nDuration (minutes): " + duration +
+                "\tKeyword: " + keyword + "\n" + next;
     }
 
-    public Video enqueue (Integer duration, String keyword){
-        Video head = new Video(duration, keyword) ;
+    public Video enqueue(Integer duration, String keyword) {
+        Video head = new Video(duration, keyword);
         head.next = this;
-        return  head;
+        return head;
     }
 
-    public Integer size(){
-        if (this.next == null){
+    public Integer size() {
+        if (this.next == null) {
             return 0;
-        }
-        else{
+        } else {
             return 1 + this.next.size();
         }
     }
 
-    public Video dequeue(Integer duration, String keyword){
 
-        return null;
+    public Video dequeue() {
+        Video head = new Video(this.duration, this.keyword);
+        if (head.next == null) {
+            return null;
+        } else {
+            return head.next.next = null;
+        }
     }
 }
