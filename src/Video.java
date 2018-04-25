@@ -48,19 +48,22 @@ public class Video {
 
     public Integer size() {
         if (this.next == null) {
-            return 0;
+            return 1;
         } else {
             return 1 + this.next.size();
         }
     }
 
-
     public Video dequeue() {
         Video head = new Video(this.duration, this.keyword);
         if (head.next == null) {
-            return null;
-        } else {
-            return head.next.next = null;
+            return head;
+        }
+        else {
+            Video temp = head;
+            temp.next.next = null;
+            temp.next = null;
+            return head;
         }
     }
 }

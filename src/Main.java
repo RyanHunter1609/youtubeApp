@@ -8,11 +8,22 @@ public class Main {
         queue1 = queue1.enqueue(1, "10 Best Daily Hacks ");
         queue1 = queue1.enqueue(7, "NBA Playoffs");
 
-        System.out.println("Queue1 value(s) results: " + queue1);
-        System.out.println("Queue1 size: " + queue1.size());
+        System.out.println("Queue 1 value(s) results: " + queue1);
+        System.out.println("\nQueue 1 size: " + queue1.size());
+        System.out.println("queue is now: " + queue1);
 
-        queue1 = queue1.dequeue();
+        Video queue2 = new Video(1, "MOE MOE");
+        queue2 = queue2.enqueue(2, "Cookie Interview");
+        queue2 = queue2.enqueue(3, "Cookie Monster");
 
-        System.out.println("????????? : " + queue1 + " WORK?" );
+        System.out.println("Queue 2 value(s) results: " + queue2);
+        System.out.println("\nQueue 2 size: " + queue2.size());
+
+        queue2 = queue2.dequeue();
+        System.out.println("\nQueue 2 size: " + queue2.size());
+        System.out.println("queue is now: " + queue2);
+
+
+
     }
 }
