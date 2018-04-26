@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Queue 1 value(s) results: " + queue1);
 
         //given video
-        queue1 = queue1.enqueue(15, "(6)What Happened to Malaysia Airlines Flight 370 ");
+        queue1 = queue1.enqueue(15, "(6)What Happened to Malaysia Airlines Flight 370 ").priority();
         //output queue1 with given video ar front
         System.out.println("000000000Queue 1 value(s) results:\n" + queue1);
 
