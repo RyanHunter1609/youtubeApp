@@ -55,15 +55,26 @@ public class Video {
     }
 
     public Video dequeue() {
-        Video head = new Video(this.duration, this.keyword);
+        Video head = new Video(duration, keyword);
         if (head.next == null) {
             return head;
         }
         else {
-            Video temp = head;
+            Video temp = head.next;
             temp.next.next = null;
-            temp = head;
-            return temp;
+            return head;
+        }
+    }
+
+    //insert given video to the front of the list
+    public Video priority() {
+        Video head = new Video(this.duration, this.keyword);
+        if (head.next == null) {
+            return head;
+        } else {
+            Video temp = head;
+            temp.next = this;
+            return head;
         }
     }
 }
