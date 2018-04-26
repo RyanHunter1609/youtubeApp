@@ -12,16 +12,27 @@ public class Main {
         System.out.println("\nQueue 1 size: " + queue1.size());
         System.out.println("queue is now: " + queue1);
 
-        Video queue2 = new Video(1, "MOE MOE");
-        queue2 = queue2.enqueue(2, "Cookie Interview");
-        queue2 = queue2.enqueue(3, "Cookie Monster");
-
-        System.out.println("Queue 2 value(s) results: " + queue2);
-        System.out.println("\nQueue 2 size: " + queue2.size());
+        Video queue2 = new Video(1, "1 MOE MOE");
+        queue2 = queue2.enqueue(2, " 2 Cookie Interview");
+        System.out.println("\n(STEP 1) Queue 2 size: " + queue2.size());
+        System.out.println(" (1) queue is now: " + queue2);
 
         queue2 = queue2.dequeue();
-        System.out.println("\nQueue 2 size: " + queue2.size());
-        System.out.println("queue is now: " + queue2);
+        System.out.println("\n(STEP2) Queue 2 size: " + queue2.size());
+        System.out.println("(2) queue is now: " + queue2);
+
+
+
+        queue2 = queue2.enqueue(3, "3 Cookie Monster");
+        queue2 = queue2.enqueue(3, "4  Monster");
+
+
+        System.out.println("Queue 2 value(s) results: " + queue2);
+        System.out.println("\n(aDDED 3RD VALUE) Queue 2 size: " + queue2.size());
+
+        queue2 = queue2.dequeue();
+        System.out.println("\n (3)  Queue 2 size: " + queue2.size());
+        System.out.println("(3) queue is now: " + queue2);
 
 
 

@@ -62,8 +62,8 @@ public class Video {
         else {
             Video temp = head;
             temp.next.next = null;
-            temp.next = null;
-            return head;
+            temp = head;
+            return temp;
         }
     }
 }
