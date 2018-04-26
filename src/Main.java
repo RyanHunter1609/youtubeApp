@@ -4,13 +4,14 @@ public class Main {
         Video queue1 = new Video(5, "(1)Black Panther");
         queue1 = queue1.enqueue(2, "(2)Cracking the Coding Interview");
         queue1 = queue1.enqueue(10, "(3)How To: prepare wigs");
-        //given video
         queue1 = queue1.enqueue(1, "(4)10 Best Daily Hacks ");
         queue1 = queue1.enqueue(7, "(5)NBA Playoffs");
-        //output given video
         System.out.println("\nQueue 1 size: " + queue1.size());
         System.out.println("Queue 1 value(s) results: " + queue1);
+
+        //given video
         queue1 = queue1.enqueue(15, "(6)What Happened to Malaysia Airlines Flight 370 ");
+        //output queue1 with given video ar front
         System.out.println("000000000Queue 1 value(s) results:\n" + queue1);
 
         Video queue2 = new Video(1, "(1) MOE MOE");
