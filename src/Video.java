@@ -60,8 +60,15 @@ public class Video {
             return head;
         }
         else {
-            Video temp = head.next;
-            temp.next.next = null;
+            while (head.next != null) {
+                //(1) move to the node before the last node
+                Video temp = head;
+                //(2) delete that last node by setting it to null
+                temp.next.next = null;
+
+            }
+
+            //(3) return the head of the list
             return head;
         }
     }
