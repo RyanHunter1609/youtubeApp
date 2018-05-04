@@ -55,21 +55,20 @@ public class Video {
     }
 
     public Video dequeue() {
-        Video head = new Video(duration, keyword);
-        if (head.next == null) {
-            return head;
+        if (this == null) {
+            return this;
         }
         else {
-            while (head.next != null) {
                 //(1) move to the node before the last node
-                Video temp = head;
+            Video temp = this;
                 //(2) delete that last node by setting it to null
-                temp.next.next = null;
+//                temp.next.next == null
+            temp.next.next = null;
 
-            }
+
 
             //(3) return the head of the list
-            return head;
+            return this;
         }
     }
 

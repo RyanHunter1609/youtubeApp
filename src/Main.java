@@ -28,6 +28,8 @@ public class Main {
         queue2 = queue2.enqueue(3, "(6) Barack Obama");
         System.out.println("\nQueue 2 size: " + queue2.size());
         System.out.println("Queue 2 value(s) results: " + queue2);
+//        queue2 = queue2.enqueue(3, "(6) Barack Obama");
+
 
         queue2 = queue2.dequeue();
         System.out.println("\nQueue 2 size: " + queue2.size());
