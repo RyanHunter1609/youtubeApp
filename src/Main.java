@@ -11,27 +11,27 @@ public class Main {
 
         //given video
         queue1 = queue1.enqueue(15, "(6)What Happened to Malaysia Airlines Flight 370 ").priority();
-        //output queue1 with given video ar front
-        System.out.println("000000000Queue 1 value(s) results:\n" + queue1);
+        System.out.println("\n*Enqueued*");
+        System.out.println("*Priority*");
+        //output queue1 with given video at front
+        System.out.println("\nQueue 1 value(s) results:\n" + queue1);
 
         Video queue2 = new Video(1, "(1) MOE MOE");
         queue2 = queue2.enqueue(2, " (2) Cookie Interview");
         System.out.println("Queue 2 value(s) results: " + queue2);
-
         queue2 = queue2.dequeue();
+        System.out.println("\n*Dequeued*");
         System.out.println("\nQueue 2 size: " + queue2.size());
         System.out.println("Queue 2 is now: " + queue2);
-
         queue2 = queue2.enqueue(3, "(3) Cooking With Pam");
         queue2 = queue2.enqueue(3, "(4) Cave Men: 101");
         queue2 = queue2.enqueue(45, "(5) DON QUIXOTE");
         queue2 = queue2.enqueue(3, "(6) Barack Obama");
+        System.out.println("\n*Enqueued*");
         System.out.println("\nQueue 2 size: " + queue2.size());
         System.out.println("Queue 2 value(s) results: " + queue2);
-//        queue2 = queue2.enqueue(3, "(06) Barack Obama");
-
-
         queue2 = queue2.dequeue();
+        System.out.println("\n*Dequeued*");
         System.out.println("\nQueue 2 size: " + queue2.size());
         System.out.println("Queue 2 is now: " + queue2);
 
