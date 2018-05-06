@@ -46,7 +46,8 @@ public class Main {
         System.out.println("Enter Duration (minutes) >>> ");
         Integer minutes = scanner.nextInt();
 
-        Video matchingVideo = videoMatch(keyword, minutes);
+        Video matchingVideo = videoMatch(keyword, minutes, queue1, queue2);
+        System.out.println("Found... \n" + matchingVideo);
 //        System.out.println("Perform a function (Type yes or no) > ");
 //        String choice1 = scanner.next();
 //        if (choice1.equalsIgnoreCase("yes")){
@@ -60,9 +61,20 @@ public class Main {
 //        Video userPick  = userVideoSelection();
     }
 
-    private static Video videoMatch(String keyword, Integer minutes) {
+    private static Video videoMatch(String keyword, Integer minutes, Video queue1, Video queue2) {
+        //does the keyword match any videos.
+        //does min match any videos
 
-        return null;
+        if (queue1.getKeyword().equalsIgnoreCase(keyword) && queue1.getDuration() == minutes) {
+            return queue1;
+
+        }
+        if (queue2.getKeyword().equalsIgnoreCase(keyword) && queue2.getDuration() == minutes) {
+            return queue2;
+        } else {
+            return null;
+        }
+
+
     }
-
 }
