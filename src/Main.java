@@ -1,5 +1,9 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to the YouTube Application!");
         Video queue1 = new Video(5, "(1)Black Panther");
         queue1 = queue1.enqueue(2, "(2)Cracking the Coding Interview");
@@ -11,6 +15,7 @@ public class Main {
 
         //given video
         queue1 = queue1.enqueue(15, "(6)What Happened to Malaysia Airlines Flight 370 ").priority();
+
         System.out.println("\n*Enqueued*");
         System.out.println("*Priority*");
         //output queue1 with given video at front
@@ -35,5 +40,29 @@ public class Main {
         System.out.println("\nQueue 2 size: " + queue2.size());
         System.out.println("Queue 2 is now: " + queue2);
 
+        System.out.println("To Find Video, Type Key Words >>> ");
+        String keyword = scanner.nextLine();
+
+        System.out.println("Enter Duration (minutes) >>> ");
+        Integer minutes = scanner.nextInt();
+
+        Video matchingVideo = videoMatch(keyword, minutes);
+//        System.out.println("Perform a function (Type yes or no) > ");
+//        String choice1 = scanner.next();
+//        if (choice1.equalsIgnoreCase("yes")){
+//            System.out.println("Enter Video (ex. Time(min), Title)");
+//            Video choice2 = scanner.next();
+//            if ()
+//
+//
+//        } else{}
+//        System.out.println("Type the corresponding letters {Enqueue(EQ), Dequeue(DQ), Priority(P)} >");
+//        Video userPick  = userVideoSelection();
     }
+
+    private static Video videoMatch(String keyword, Integer minutes) {
+
+        return null;
+    }
+
 }

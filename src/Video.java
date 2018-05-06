@@ -59,14 +59,10 @@ public class Video {
             return this;
         }
         else {
-                //(1) move to the node before the last node
+            //(1) move to the node before the last node
             Video temp = this;
-                //(2) delete that last node by setting it to null
+            //(2) delete that last node by setting it to null
             temp = this.next;
-//            temp.next.next = null;
-
-
-
             //(3) return the head of the list
             return temp;
         }
