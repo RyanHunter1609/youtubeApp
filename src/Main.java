@@ -65,11 +65,11 @@ public class Main {
         //does the keyword match any videos.
         //does min match any videos
 
-        if (queue1.getKeyword().equalsIgnoreCase(keyword) && queue1.getDuration() == minutes) {
+        if (queue1.getKeyword().equalsIgnoreCase(keyword) && queue1.getDuration() <= minutes) {
             return queue1;
 
         }
-        if (queue2.getKeyword().equalsIgnoreCase(keyword) && queue2.getDuration() == minutes) {
+        if (queue2.getKeyword().equalsIgnoreCase(keyword) && queue2.getDuration() <= minutes) {
             return queue2;
         } else {
             return null;
