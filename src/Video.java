@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Queue;
 
 public class Video {
@@ -54,29 +55,77 @@ public class Video {
         }
     }
 
+    // Your code is removing the last/back video so not working like a queue
+    // TODO: Fix dequeue() using my provided algorithm
     public Video dequeue() {
         if (this == null) {
             return this;
+        } else if (this.next == null) {
+            return null;
         }
+// else {
+//
+//
+//            // loop until temp.next.next is null
+//            while(this.next != null) {
+//                Video temp = this;
+//                temp.next.next = null;
+//                temp.next = null;
+//            }
         else {
-            //(1) move to the node before the last node
+
             Video temp = this;
-            //(2) delete that last node by setting it to null
-            temp = this.next;
-            //(3) return the head of the list
-            return temp;
+            Video val;
+
+            while (this.next.next == null) {
+                val = temp;
+                temp = null;
+                temp = this.next;
+
+            }
         }
+        return this;
     }
 
-    //insert given video to the front of the list
-    public Video priority() {
-        Video head = new Video(this.duration, this.keyword);
-        if (head.next == null) {
-            return head;
-        } else {
-            Video temp = head;
-            temp.next = this;
-            return head;
+
+    // TODO: Fix priority(video, minutes) using provided algorithm
+    // This method should put [video] at front of list if same length as [minutes]
+    // otherwise put [video] at back of list
+    public Video priority(Video video, int minutes) {
+//        Video head = new Video(this.duration, this.keyword);
+//        if (head.next == null) {
+//            return head;
+//        } else {
+//            Video temp = head;
+//            temp.next = this;
+//            return head;
+//        }
+
+        // THE CORRECT ALGORITHM
+        //
+        // IF the [video] is exactly [minutes] in length, then append [video] by doing
+        Video temp = this;
+        //     loop until temp.next is null
+        //     once temp.next is null
+        //         temp.next = video;
+        return this;
+        // ELSE the [video] is not exactly [minutes] in length, then prepend [video]
+        // and then return temp;
+    }
+
+    // TODO: Fix videoMatch() so it also checks the user's keywords
+    public ArrayList<String> videoMatch(ArrayList<String> userKeywords, int userMinutes) {
+        ArrayList<String> answer = new ArrayList<>();
+
+        Video video = this;
+
+        while (video != null) {
+            if (video.duration <= userMinutes) {
+                answer.add(video.keyword);
+            }
+            video = video.next;
         }
+
+        return answer;
     }
 }
