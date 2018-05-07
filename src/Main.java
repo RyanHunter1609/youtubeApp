@@ -15,6 +15,10 @@ public class Main {
         System.out.println("\nQueue 1 size: " + queue1.size());
         System.out.println("Queue 1 value(s) results: " + queue1);
 
+        queue1 = queue1.dequeue();
+        System.out.println("\nQueue 1 size: " + queue1.size());
+        System.out.println("Queue 1 value(s) results: " + queue1);
+
         ArrayList<String> keywords = new ArrayList<>(Arrays.asList("Book", "How"));
         int minutes = 3;
         ArrayList<String> searchResult = queue1.videoMatch(keywords, minutes);

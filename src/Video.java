@@ -87,7 +87,6 @@ public class Video {
         return this;
     }
 
-
     // TODO: Fix priority(video, minutes) using provided algorithm
     // This method should put [video] at front of list if same length as [minutes]
     // otherwise put [video] at back of list
