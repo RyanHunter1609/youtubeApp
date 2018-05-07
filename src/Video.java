@@ -91,25 +91,22 @@ public class Video {
     // This method should put [video] at front of list if same length as [minutes]
     // otherwise put [video] at back of list
     public Video priority(Video video, int minutes) {
-//        Video head = new Video(this.duration, this.keyword);
-//        if (head.next == null) {
-//            return head;
-//        } else {
-//            Video temp = head;
-//            temp.next = this;
-//            return head;
-//        }
-
         // THE CORRECT ALGORITHM
-        //
         // IF the [video] is exactly [minutes] in length, then append [video] by doing
-        Video temp = this;
-        //     loop until temp.next is null
-        //     once temp.next is null
-        //         temp.next = video;
-        return this;
+        if (video.duration == minutes) {
+            Video temp = this;
+            //     loop until temp.next is null
+            while (temp.next == null) {
+                //     once temp.next is null
+                temp.next = video;
+            }
+            return this;
+        }
         // ELSE the [video] is not exactly [minutes] in length, then prepend [video]
-        // and then return temp;
+        else {
+            // and then return temp;
+            return temp;
+        }
     }
 
     // TODO: Fix videoMatch() so it also checks the user's keywords
